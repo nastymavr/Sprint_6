@@ -10,10 +10,16 @@ import java.util.List;
 public class FelineTest {
 
     @Test
-    void testEatMeatReturnsCorrectFood() throws Exception {
+    void testEatMeatReturnsNonNullList() throws Exception {
         Feline feline = new Feline();
         List<String> food = feline.eatMeat();
         assertNotNull(food);
+    }
+
+    @Test
+    void testEatMeatContainsAnimals() throws Exception {
+        Feline feline = new Feline();
+        List<String> food = feline.eatMeat();
         assertTrue(food.contains("Животные"));
     }
 
